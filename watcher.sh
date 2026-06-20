@@ -171,10 +171,12 @@ else
         done
 
         # Check for new files
-        for new_f in "${new_snapshot[@]}"; if [[ -z "${snapshot[$new_f]:-}" ]]; then
-            snapshot["$new_f"]="$(stat -c '%Y.%s' "$new_f" 2>/dev/null || echo 0)"
-            [[ -n "$EXCLUDE_PATTERN" ]] && echo "$new_f" | grep -qE "$EXCLUDE_PATTERN" && continue
-            log_msg "CHANGE" "create | $new_f"
-        fi; done
+        for new_f in "${new_snapshot[@]}"; do
+            if [[ -z "${snapshot[$new_f]:-}" ]]; then
+                snapshot["$new_f"]="$(stat -c '%Y.%s' "$new_f" 2>/dev/null || echo 0)"
+                [[ -n "$EXCLUDE_PATTERN" ]] && echo "$new_f" | grep -qE "$EXCLUDE_PATTERN" && continue
+                log_msg "CHANGE" "create | $new_f"
+            fi
+        done
     done
 fi
