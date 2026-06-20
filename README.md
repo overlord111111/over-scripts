@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python">
+</p>
+
 # 📜 Over Scripts
 
 Coleção de scripts úteis do dia a dia — automação, scraping, bypass e utilitários diversos.
