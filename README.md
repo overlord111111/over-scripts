@@ -239,3 +239,10 @@ chmod +x *.sh
 | `network_check.sh` | Teste de conectividade DNS/ping/TCP |
 
 Feito com ☕ e 🎯
+
+---
+
+<p align="center">
+  <a href="https://overlord111111.github.io">Portfolio</a> &bull; 
+  <a href="https://github.com/overlord111111">GitHub</a>
+</p>
